@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Gideon+Roman&family=Roboto+Mono:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --backgroundColor: #000000;
+  --backgroundColorVariant: #151515;
+  --primaryColor: #f07900;
+  --primaryColorVariant: #d35100;
+  --whiteColor: whiteSmoke;
+  --whiteColorLight: white;
+
+  --containerLargeWidth: 75%;
+  --containerMediumWidth: 86%;
+  --containerSmallWidth: 90%;
+
+  --transition: all 400ms ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  background: var(--backgroundColor);
+  color: var(--whiteColor);
+  line-height: 1.7;
+  background-image: url("./assets/background.png");
+}
+
+/* General styles */
+
+.container {
+  width: var(--containerLargeWidth);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section > h2,
+section > h5 {
+  text-align: center;
+  color: var(--whiteColor);
+}
+
+section > h2 {
+  color: var(--primaryColor);
+  margin-bottom: 3rem;
+}
+
+.text-light {
+  color: var(--whiteColor);
+}
+
+a {
+  color: var(--primaryColor);
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--whiteColorLight);
+}
+
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--primaryColor);
+  padding: 0.75rem 1.2rem;
+  cursor: pointer;
+  border: 1px solid var(--primaryColor);
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background: var(--whiteColor);
+  color: var(--backgroundColor);
+  border-color: transparent;
+}
+
+.btn-primary {
+  background: var(--primaryColor);
+  color: var(--backgroundColor);
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* MEDIA QUEERY */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--containerMediumWidth);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--containerSmallWidth);
+  }
+
+  section > h2 {
+    margin-bottom: 2rem;
+  }
+}
